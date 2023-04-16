@@ -1,1 +1,1 @@
-web: python app.py --port=3000
+web: python app.py --host=0.0.0.0 --port=3000
