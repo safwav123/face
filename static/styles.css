@@ -21,6 +21,9 @@ nav .navbar-brand .green
 {
     color: #2e944b;
 }
+  
+
+
 
 main .form-control
 {
@@ -45,11 +48,76 @@ main img
     /* constrain images on small screens */
     max-width: 100%;
 }
+
+
+
 .time-left {
   float: left;
   color: #999;
 }
   @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+body {
+    background-color: #8c00ff;
+    background-size: cover;
+    height:100%;
+    text-align:center;
+}
+
+
+
+.jelly {
+    font-size:24px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    border: none;
+    cursor: pointer;
+
+
+
+    text-transform: uppercase;
+    -webkit-animation:  anim 2s ease-in infinite;
+    animation:  anim 2s ease-in infinite;
+    transition: all .1s;
+    background: #ca34db;
+    color: #fff!important;
+    overflow: hidden;
+    text-decoration:none;
+}
+
+.jelly:active  {
+    background: #8b47b5;
+}
+
+@-webkit-keyframes anim {
+    5% {
+    -webkit-transform: scale(1.1, .9);
+    transform: scale(1.1, .9);
+}
+10% {
+    -webkit-transform: scale(.9, 1.1) translateY(-.5rem);
+    transform: scale(.9, 1.1) translateY(-.5rem);
+}
+15% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+}
+@keyframes anim {
+    5% {
+    -webkit-transform: scale(1.1, .9);
+    transform: scale(1.1, .9);
+}
+10% {
+    -webkit-transform: scale(.9, 1.1) translateY(-.5rem);
+    transform: scale(.9, 1.1) translateY(-.5rem);
+}
+15% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 body {
     background-color: #8c00ff;
@@ -136,11 +204,14 @@ footer a:hover {
   color:#2b2b2b;
 }
 
+
+
+
 .f_modal {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 0;
   left: 0;
   top: 0;
   width: 100%;
@@ -161,6 +232,7 @@ footer a:hover {
 }
 
 
+
 .f_close {
   color: #aaaaaa;
   float: right;
@@ -177,7 +249,8 @@ footer a:hover {
 }
 
 
-.modal_n{
+
+.modal_n {
   display: none;
   position: fixed;
   z-index: 1;
@@ -191,8 +264,7 @@ footer a:hover {
   background-color: rgba(0,0,0,0.4);
 }
 
-
-.modal-content_n{
+.modal-content_n {
   background-color: #fefefe;
   margin: auto;
   padding: 30px;
@@ -213,7 +285,9 @@ footer a:hover {
 .close_n:focus {
   color: #000;
   text-decoration: none;
-  cursor: pointer;}
+  cursor: pointer;
+}
+
 
 .close_img {
   color: #aaaaaa;
@@ -227,9 +301,11 @@ footer a:hover {
 .close_img:focus {
   color: #000;
   text-decoration: none;
-  cursor: pointer;}
+  cursor: pointer;
+}
 
-  .close_bg {
+
+.close_bg {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
@@ -241,19 +317,20 @@ footer a:hover {
 .close_bg:focus {
   color: #000;
   text-decoration: none;
-  cursor: pointer;}
+  cursor: pointer;
+}
 
-.btn btn-primary:hover
-{
+.btn btn-primary:hover {
   opacity: 1;
 }
 
-#myBtn_bg:before
-{
+
+#myBtn_bg:before {
   background: rgb(255, 105, 125);
   opacity: .5;
   filter: blur(0.5px);
 }
+
 
 
 .container {
@@ -298,20 +375,20 @@ footer a:hover {
 .btn2{
 
   background: none;
-  padding: 10px 10px;
-  font-size: 18px;
+  padding: 1em 2em;
+  font-size: 2rem;
   font-family: "montserrat";
   cursor: pointer;
-  margin: 14px;
-  transition: 2s;
+  margin: 1.4em;
+  transition: 0.5s;
   position: relative;
   overflow: hidden;
   color: black;
   font-size:5em;
   
-text-shadow:-2px 2px #cacaca,
-             -4px 4px #cacaca,
-             -6px 6px #cacaca;
+  text-shadow:-0.2em 0.2em #cacaca,
+              -0.4em 0.4em #cacaca,
+              -0.6em 0.6em #cacaca;
 
 }
 
@@ -374,5 +451,39 @@ text-shadow:-2px 2px #cacaca,
   to {
     box-shadow: 0 0 20px #fff, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;
   background:white;
+  }
+}
+
+/* Styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  .f_modal-content {
+    height: auto;
+  }
+  
+
+}
+
+/* Styles for screens smaller than 576px */
+@media (max-width: 576px) {
+  .f_modal-content {
+    padding: 10px;
+  }
+  
+  .close_n,
+  .close_img,
+  .close_bg {
+    font-size: 20px;
+  }
+  
+  .btn2 {
+    font-size: 3em;
+  }
+}
+
+/* Styles for screens larger than 1200px */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
   }
 }
