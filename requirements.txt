@@ -1,3 +1,4 @@
+pip==23.0.1
 cachelib==0.10.2
 certifi==2022.12.7
 charset-normalizer==3.1.0
